@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,11 @@ Auth::routes();
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
-    Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori');
+
+    Route::get('/kategori', [KategoriController::class, 'index']);
+    Route::get('/kategori/tambah', [KategoriController::class, 'create']);
+    Route::post('/kategori/tambah', [KategoriController::class, 'store']);
+    Route::get('/kategori/{slug}/edit', [KategoriController::class, 'edit']);
+    Route::put('/kategori/{slug}', [KategoriController::class, 'update']);
+    Route::delete('/kategori/{slug}', [KategoriController::class, 'destroy']);
 });
