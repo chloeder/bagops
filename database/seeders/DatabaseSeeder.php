@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             Userseeder::class,
             KategoriSeeder::class,
             DataSeeder::class,
-            PenerbitSeeder::class,
+            StatusSeeder::class,
         ]);
     }
 }

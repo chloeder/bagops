@@ -22,4 +22,9 @@ class Kategori extends Model
             ->generateSlugsFrom('nama')
             ->saveSlugsTo('slug');
     }
+
+    public function data()
+    {
+        return $this->hasMany(Data::class);
+    }
 }

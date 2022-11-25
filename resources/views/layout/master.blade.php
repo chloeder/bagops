@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/templates/dist/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/templates/dist/assets/vendors/iconly/bold.css">
     <link rel="stylesheet" href="/templates/dist/assets/vendors/simple-datatables/style.css">
-    {{-- {% block styles %}{% endblock %} --}}
+
     <link rel="stylesheet" href="/templates/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="/templates/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="/templates/dist/assets/css/app.css">
@@ -53,6 +53,7 @@
         let table1 = document.querySelector('#table1');
         let dataTable = new simpleDatatables.DataTable(table1);
     </script>
+    @yield('footer')
 
 </body>
 

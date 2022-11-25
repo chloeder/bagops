@@ -7,28 +7,24 @@ use Spatie\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Data extends Model
+class Status extends Model
 {
     use HasFactory, HasSlug;
 
-    protected $table = 'data';
 
-    protected $guarded = [];
+    protected $table = 'status';
+
+    protected $fillable = ['nama', 'slug'];
 
     public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
-            ->generateSlugsFrom('judul')
+            ->generateSlugsFrom('nama')
             ->saveSlugsTo('slug');
     }
 
-    public function kategori()
+    public function data()
     {
-        return $this->belongsTo(Kategori::class);
-    }
-
-    public function status()
-    {
-        return $this->belongsTo(Status::class);
+        return $this->hasMany(Data::class);
     }
 }

@@ -20,16 +20,27 @@ class DataSeeder extends Seeder
             'judul' => 'Polsek Tondano',
             'nomor' => '001',
             'slug' => Str::of('Polsek Tondano')->slug('-'),
-            'penerbit_id' => 1,
+            'keterangan' => 'Daftar buronan',
             'kategori_id' => 1,
+            'status_type' => 1,
         ]);
 
         Data::create([
             'judul' => 'Kumtua Tondano',
-            'nomor' => '001',
+            'nomor' => '002',
             'slug' => Str::of('Kumtua Tondano')->slug('-'),
-            'penerbit_id' => 2,
+            'keterangan' => 'Giat Babin',
             'kategori_id' => 2,
+            'status_type' => 1,
+        ]);
+
+        Data::create([
+            'judul' => 'Kelurahan Tondano',
+            'nomor' => '003',
+            'slug' => Str::of('Kelurahan Tondano')->slug('-'),
+            'keterangan' => 'Sosialisasi di Kelurahan',
+            'kategori_id' => 3,
+            'status_type' => 1,
         ]);
     }
 }

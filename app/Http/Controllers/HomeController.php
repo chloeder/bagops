@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Data;
-use App\Models\Kategori;
 use App\Models\User;
+use App\Models\Status;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -26,10 +28,17 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $data = Data::all();
+        $kategori = Kategori::all();
         $dashboard = 'dashboard';
         $datacount = Data::count();
         $kategoricount = Kategori::count();
         $usercount = User::count();
-        return view('dashboard', ['data_count' => $datacount, 'kategori_count' => $kategoricount, 'user_count' => $usercount], compact('dashboard'));
+        $totalDiterima = Data::where(['status_type' => 2])->count();
+        $totalTerlambat = Data::where(['status_type' => 3])->count();
+
+        $diterima = [$datacount];
+
+        return view('dashboard', ['diterima' => $diterima, 'data_count' => $datacount, 'kategori_count' => $kategoricount, 'user_count' => $usercount, 'total_terlambat' => $totalTerlambat, 'total_diterima' => $totalDiterima], compact('dashboard'));
     }
 }

@@ -26,7 +26,7 @@
             {{-- Kategori --}}
             <li class="sidebar-title ">Kategori</li>
 
-            <li class="sidebar-item has-sub  {{ request()->is('kategori') ? 'active' : '' }}">
+            <li class="sidebar-item has-sub  {{ request()->is('kategori', 'kategori/tambah') ? 'active' : '' }}">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-pen-fill"></i>
                     <span>Kategori</span>
@@ -37,7 +37,7 @@
                             List Kategori
                         </a>
                     </li>
-                    <li class="submenu-item ">
+                    <li class="submenu-item {{ request()->is('kategori/tambah') ? 'active' : '' }}">
                         <a href="/kategori/tambah">Tambah Kategori</a>
                     </li>
                 </ul>
@@ -55,25 +55,26 @@
             <li class="sidebar-title">Dokumen</li>
 
 
-            <li class="sidebar-item  ">
-                <a href="table-datatable.html" class='sidebar-link'>
+            <li class="sidebar-item  {{ request()->is('dokumen') ? 'active' : '' }} ">
+                <a href="/dokumen" class='sidebar-link'>
                     <i class="bi bi-file-earmark-spreadsheet-fill"></i>
                     <span>Dokumen</span>
                 </a>
             </li>
 
-            <li class="sidebar-item  ">
-                <a href="table-datatable.html" class='sidebar-link'>
-                    <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                    <span>Dokumen Pending</span>
+
+
+            <li class="sidebar-item {{ request()->is('dokumen/tambah') ? 'active' : '' }}">
+                <a href="/dokumen/tambah" class='sidebar-link'>
+                    <i class="bi bi-cloud-arrow-up-fill"></i>
+                    <span>Upload Dokumen</span>
                 </a>
             </li>
 
-
             <li class="sidebar-item  ">
-                <a href="ui-file-uploader.html" class='sidebar-link'>
-                    <i class="bi bi-cloud-arrow-up-fill"></i>
-                    <span>Upload Dokumen</span>
+                <a href="#" class='sidebar-link'>
+                    <i class="bi bi-x-octagon-fill"></i>
+                    <span>Dokumen Pending</span>
                 </a>
             </li>
 

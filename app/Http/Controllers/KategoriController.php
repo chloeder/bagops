@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Data;
+use App\Models\Status;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
 
@@ -25,7 +27,8 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        return view('category.create');
+        $kategori = Kategori::all();
+        return view('category.create', compact('kategori'));
     }
 
     /**
@@ -40,8 +43,9 @@ class KategoriController extends Controller
             'nama' => 'required|unique:kategori|max:255',
         ]);
 
+
         $kategori = Kategori::create($request->all());
-        return redirect('kategori')->with('status', 'Kategori Baru berhasil Ditambahkan!');
+        return redirect()->route('kategori', compact('kategori'))->with('status', 'Kategori Baru berhasil Ditambahkan!');
     }
 
     /**

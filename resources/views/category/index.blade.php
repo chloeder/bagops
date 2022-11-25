@@ -41,10 +41,10 @@
                         </thead>
                         <tbody>
                             @foreach ($kategori as $category)
-                                <tr class="text-center">
+                                <tr class="">
                                     <td class="align-middle">{{ $loop->iteration }}</td>
                                     <td class="align-middle">{{ $category->nama }}</td>
-                                    <th class="d-flex justify-content-center align-middle">
+                                    <th class="d-flex align-middle">
                                         <a href="/kategori/{{ $category->slug }}/edit"
                                             class="btn btn-primary btn-sm px-2 mx-2 "><i
                                                 class="bi bi-pencil-square"></i></a>

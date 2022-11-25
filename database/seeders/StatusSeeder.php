@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Penerbit;
+use App\Models\Status;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class PenerbitSeeder extends Seeder
+class StatusSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,12 +16,12 @@ class PenerbitSeeder extends Seeder
      */
     public function run()
     {
-        $penerbit = ['Admin', 'Staff'];
+        $statustype = ['Diproses', 'Diterima', 'Terlambat'];
 
-        foreach ($penerbit as $value) {
-            Penerbit::create([
+        foreach ($statustype as $value) {
+            Status::create([
                 'nama' => $value,
-                'slug' => Str::slug($value)
+                'slug' => Str::of($value),
             ]);
         }
     }

@@ -18,8 +18,12 @@ return new class extends Migration
             $table->string('judul');
             $table->string('nomor');
             $table->string('slug');
-            $table->foreignId('penerbit_id');
+            $table->string('file')->nullable();
+            $table->string('keterangan');
+            $table->foreignId('status_type')->default(1);
             $table->foreignId('kategori_id');
+            $table->date('diterima')->nullable();
+            $table->date('terlambat')->nullable();
             $table->timestamps();
         });
     }

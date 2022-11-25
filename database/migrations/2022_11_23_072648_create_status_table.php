@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('penerbit', function (Blueprint $table) {
+        Schema::create('status', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->string('slug');
+
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('penerbit');
+        Schema::dropIfExists('status');
     }
 };
