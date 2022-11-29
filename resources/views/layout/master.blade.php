@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/templates/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="/templates/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="/templates/dist/assets/css/app.css">
-    <link rel="shortcut icon" href="/templates/dist/assets/images/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/bagops.png" type="image/x-icon">
 
 </head>
 

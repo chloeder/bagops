@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\KategoriController;
 
 /*
@@ -18,7 +19,7 @@ use App\Http\Controllers\KategoriController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Auth::routes();
@@ -44,4 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/dokumen/{slug}', [DataController::class, 'destroy']);
 
     Route::get('download/{slug}', [DataController::class, 'download']);
+
+
+    Route::get('/user', [UserController::class, 'index']);
 });

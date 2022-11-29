@@ -2,8 +2,7 @@
     <div class="sidebar-header">
         <div class="d-flex justify-content-between">
             <div class="logo">
-                <a href="/dashboard"><img src="/templates/dist/assets/images/logo/logo.png" alt="Logo"
-                        srcset=""></a>
+                <a href="/dashboard"><img src="/img/bagops.png" alt="Logo" srcset=""></a>
             </div>
             <div class="toggler">
                 <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -71,13 +70,6 @@
                 </a>
             </li>
 
-            <li class="sidebar-item  ">
-                <a href="#" class='sidebar-link'>
-                    <i class="bi bi-x-octagon-fill"></i>
-                    <span>Dokumen Pending</span>
-                </a>
-            </li>
-
             <li class="sidebar-title">Authentication</li>
 
 
@@ -88,21 +80,13 @@
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item ">
-                        <a href="auth-login.html">User</a>
+                        <a href="/user">User</a>
                     </li>
                     <li class="submenu-item ">
                         <a href="auth-register.html">Role</a>
                     </li>
                 </ul>
             </li>
-
-            <li class="sidebar-item  ">
-                <a href="application-chat.html" class='sidebar-link'>
-                    <i class="bi bi-chat-dots-fill"></i>
-                    <span>Chat Application</span>
-                </a>
-            </li>
-
 
             <li class="sidebar-title">Account</li>
 

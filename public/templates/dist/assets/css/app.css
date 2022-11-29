@@ -763,7 +763,8 @@
     font-weight: 700;
 }
 .sidebar-wrapper .sidebar-header img {
-    height: 1.2rem;
+    width: 10rem;
+    margin-left: 30px;
 }
 .sidebar-wrapper .sidebar-toggler.x {
     position: absolute;
