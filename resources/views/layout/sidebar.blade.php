@@ -73,17 +73,14 @@
             <li class="sidebar-title">Authentication</li>
 
 
-            <li class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
+            <li class="sidebar-item  has-sub {{ request()->is('user') ? 'active' : '' }}">
+                <a href="/user" class='sidebar-link'>
                     <i class="bi bi-person-badge-fill"></i>
                     <span>Authentication</span>
                 </a>
                 <ul class="submenu ">
-                    <li class="submenu-item ">
+                    <li class="submenu-item {{ request()->is('user') ? 'active' : '' }}">
                         <a href="/user">User</a>
-                    </li>
-                    <li class="submenu-item ">
-                        <a href="auth-register.html">Role</a>
                     </li>
                 </ul>
             </li>
